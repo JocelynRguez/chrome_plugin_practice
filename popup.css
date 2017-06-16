@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+*{
+	height: 80px;
+	width: 200px;
+	color: white;
+	text-align: center;
+	margin: 0;
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+input:focus {outline:0;}
+
+p {
+	background-color: rgb(175, 184, 198);
+	height: 30px;
+}
+
+#description {
+	background-color: white;
+	color: black;	
+}
+
+input {
+	height: 30px;
+	width: 150px;
+	text-align: center;
+	border: none;
+	border-radius: 100px;
+	color: white;
+	float: center;
+	padding-top: 5px;
+	font-size: 18px;
+	margin-bottom: 5px;
+	transition-duration: 0.4s;
+
+}
+
+#help {
+	height: 25px;
+	width: 25px;
+	float: left;
+	margin: 0px 3px;
+	margin-top: 5px;
+	background: url("question.png");
+	background-size: 25px;
+
+}
+
+#options {
+	height: 25px;
+	width: 25px;
+	float: left;
+	margin: 0px 3px;
+	margin-top: 5px;
+	background: url("options.png");
+	background-size: 25px;
+}
+
+
+#top {
+	height: 30px;
+	width: 150px;
+	border-radius: 0px;
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 20px;
+	text-align: center;
+	background-color: rgb(12, 15, 13);
+	border-color: rgb(12, 15, 13);
+}
+
+#good {
+	background-color: rgb(51, 140, 66);
+	border-color: rgb(51, 140, 66);
+}
+
+#good:hover {
+	background-color: rgb(20, 188, 71);
+	
+}
+
+#bad {
+	background-color: rgb(211, 0, 31);
+	border-color: rgb(211, 0, 31);	
+}
+
+#bad:hover {
+	background-color: rgb(255, 20, 55);
+}
+
+#debug {
+	background-color: rgb(219, 120, 0);
+	border-color: rgb(219, 120, 0);
+	margin-bottom: 10px;
+}
+
+#debug:hover {
+	background-color: rgb(252, 138, 0);
+}
+
+#list {
+	border-radius: 0px;
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: rgb(149, 157, 168);
+}
+
+#list:hover {
+	background-color: rgb(108, 114, 122);
+}
+
