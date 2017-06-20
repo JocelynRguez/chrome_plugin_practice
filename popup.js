@@ -1,9 +1,12 @@
-// content.js
+// popup.js
 
-
-//document.getElementById("list").onclick = function() { alert();}
-
-function listClick(){
-	alert();
-	//document.getElementById("list").style.color = "red";
+function listClick() {
+	document.getElementById("list").innerHTML = 'it works';
 }
+
+document.getElementById("list").addEventListener("click", listClick);
+
+//var list = document.getElementById("list");
+
+
+//list.addEventListener("click", myFunction())

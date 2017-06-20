@@ -20,8 +20,9 @@ p {
 	background-color: white;
 	color: black;	
 }
+button:focus {outline:0;}
 
-input {
+button {
 	height: 30px;
 	width: 150px;
 	text-align: center;
@@ -33,6 +34,7 @@ input {
 	font-size: 18px;
 	margin-bottom: 5px;
 	transition-duration: 0.4s;
+
 
 }
 
