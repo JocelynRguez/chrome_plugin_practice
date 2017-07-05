@@ -16,20 +16,19 @@ function appendRow(theSite){
 	cell2.innerHTML = '<button class= "trash" ></button>';
 	cell3.innerHTML = '<button class= "reload" ></button>';
 
-	var d = new Date();
-	cell4.innerHTML = d.getMonth() + "/" + d.getDay() + "/" + d.getFullYear(); 
+	cell4.innerHTML = theSite.date; 
 	
-	cell5.innerHTML = theSite;
+	cell5.innerHTML = theSite.site;
 
-
-	console.log("this is working so far");
 }
 
 function updateTable() {
 	var storedData = localStorage.getItem("site");
+	console.log(storedData);
 	if(storedData){
 		var arrayData = JSON.parse(storedData);
 		for(var i = 0; i < arrayData.length; i++){
+			console.log("current object is: " + arrayData[i]);
 			appendRow(arrayData[i]);
 			console.log("working");
 		}
@@ -37,6 +36,16 @@ function updateTable() {
 	}
 	
 }
+
+function findRow(storedSites, url){
+	for (var i = 0; i < storedSites.length; i++){
+		if(storedSites[i].site = url){
+			return i; 
+		}
+	}
+
+}
+
 
 function removeRow(){
 	console.log("hello " + this.parentNode.parentNode.rowIndex);
@@ -46,12 +55,16 @@ function removeRow(){
 	//remove the site from array
 	var storedData = localStorage.getItem("site");
 	var arrayData = JSON.parse(storedData);
+
+
 	var currentSite =  this.parentNode.parentNode.cells[4].innerHTML;
-	var r = arrayData.indexOf(currentSite);
-	console.log("index is: " + r);
+	var i = findRow(storedData, currentSite + 1);
+	//find ind
+	//var r = arrayData.indexOf(index);
+	console.log("index is: " + index);
 	
 	
-	arrayData.splice(r, 1);
+	arrayData.splice(i, 1);
 	localStorage.setItem("site", JSON.stringify(arrayData));
 
 	console.log("the new data is " + arrayData);
